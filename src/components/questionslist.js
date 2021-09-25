@@ -1,7 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router,  Link } from "react-router-dom";
+import { addQuiz } from "../quizSlice";
+import { useDispatch , useSelector} from "react-redux";
+
 
 const QuestionsList = ({items}) => {
+
+    const tester = useSelector((state) => state.question)
+    console.log("this is a " + tester);
 
     const SingleItem = items.map((item, index) => {
 

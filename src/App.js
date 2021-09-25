@@ -4,6 +4,9 @@ import QuestionsList from './components/questionslist'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import QuizData from './components/quizdata';
 import AddQuestions from './components/addquestions';
+import { Provider } from 'react-redux';
+import { useSelector } from 'react-redux';
+
 
 function App() {
 
@@ -12,7 +15,7 @@ function App() {
   return (
 
     
-    
+
     <Router>
       <Switch>
         
