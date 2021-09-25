@@ -12,11 +12,11 @@ function App() {
   return (
 
     
-
+    
     <Router>
       <Switch>
         
-      <Route exact path='/' render={({match}) => (
+      <Route exact path='/' render={() => (
             <QuestionsList
               items={quizzes}
         />)}>      

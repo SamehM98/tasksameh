@@ -20,7 +20,7 @@ const QuestionsList = ({items}) => {
         {SingleItem}
 
         <Link to={`/createQuiz`}>
-        <button style={{margin: '0 auto', display: 'block'}}>Add New Quiz</button>
+        <button className="btn-1">Add New Quiz</button>
         </Link>
 
         

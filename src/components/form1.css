@@ -10,7 +10,7 @@ input{
     margin-top: 20px;
 }
 
-button{
+.btn-1{
     margin: 60px auto;
     display: block;
     padding: 8px;
@@ -18,4 +18,11 @@ button{
 
 .questionsWrapper{
     margin-left: 5%;
+}
+
+.buttonWrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20%;
+    margin-top: 5%;
 }

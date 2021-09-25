@@ -51,10 +51,16 @@ const QuizData = () => {
         <label>Youtube URL</label><br/>
         <input type="text" id="Url" onChange={onTermChange} value={url}/>
         </div>
+
+        <div class="inputs">
+        <label>Final Score</label><br/>
+        <input type="text" id="Url" onChange={onTermChange} value={url}/>
+        </div>
+
         </form>
 
-        <Link to="/addquestions">
-        <button> Next </button>
+        <Link to="/addquestions" >
+        <button className="btn-1"> Next </button>
         </Link>
 
         </div>
