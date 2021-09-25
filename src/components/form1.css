@@ -1,0 +1,21 @@
+.wrapper{
+    padding: 5%;
+}
+
+input{
+    padding: 8px;
+}
+
+.inputs{
+    margin-top: 20px;
+}
+
+button{
+    margin: 60px auto;
+    display: block;
+    padding: 8px;
+}
+
+.questionsWrapper{
+    margin-left: 5%;
+}
