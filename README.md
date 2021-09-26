@@ -68,3 +68,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### My application
+
+The application can add and edit quizzes, using Redux, state management, navigation, etc.
+The first step to the input is the initial data of the quiz, the next screen follows is about the questions.
+The number of options per question is dynamic as per the user's request.
+![sc1](https://user-images.githubusercontent.com/66166781/134790189-cc8e00b7-1660-4d7c-9285-fdab8f53e628.PNG)
+![sc2](https://user-images.githubusercontent.com/66166781/134790208-d5962f5f-a906-4456-9a78-4d3281a47ed3.PNG)
+![sc3](https://user-images.githubusercontent.com/66166781/134790212-0f2c25f5-50d2-4418-b99e-f95c802a03ba.PNG)
+
+After finishing the user navigates to the home screen showing the list of quizzes. 
+A user can click on the quiz to edit it, the initial values already filled. 
+![sc4](https://user-images.githubusercontent.com/66166781/134790227-ff852452-3a50-49fc-b782-c1963ef3e09a.PNG)
+![sc5](https://user-images.githubusercontent.com/66166781/134790232-8a7fffb0-e438-4a28-82e4-41f36e97432d.PNG)
+
+The data is all saved in a global state array that can be accessed anywhere by Redux. This is an example of an object inside the array, with the nested questions object
+![sc6](https://user-images.githubusercontent.com/66166781/134790270-05463ce2-3757-4e4f-8d17-1b730c3baf62.PNG)
+![sc7](https://user-images.githubusercontent.com/66166781/134790274-7765cbe2-6db4-4ed5-a4ca-c676ae20b03b.PNG)
+
+
