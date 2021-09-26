@@ -1,23 +1,31 @@
-import React , { useState , useEffect}from "react";
+import React , { useState}from "react";
 import Select from 'react-select'
-
+import { useLocation } from "react-router";
+import { useDispatch } from "react-redux";
+import {addQuiz} from '../quizSlice'
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const AddQuestions = () => {
 
+  const location = useLocation();
+  const dispatch = useDispatch();
+  const quiz_id = (useSelector((state) => state.question.value.length))+1
   
+
     //options for the dropbox
     const[options , setOptions] = useState([
         { value: '1', label: '1' },
         { value: '2', label: '2' }
       ])
 
-     //the selected option
+     //the selected option for the correct naswer
      const [selected, setSelected] = useState(options[0]); 
 
       //the questions query input
       const[query, setQuery] = useState('');
 
-      //Question ID
+      //Question ID 
       const[questionId, setQuestionId] = useState(1);
 
       //answers query input
@@ -42,7 +50,7 @@ const AddQuestions = () => {
 
       }
 
-      //adding new question and reseting
+      //adding new question to the array and reseting inputs
       const Reset = () =>{
 
         setList([...list, {
@@ -104,6 +112,23 @@ const AddQuestions = () => {
         
       }
 
+      //Redux. Push to global state array
+
+      const AddNew = () =>{
+        dispatch(addQuiz({
+
+          "title" : location.state.title,
+          "description": location.state.description,
+          "url" : location.state.url,
+          "final_score": location.state.final_score,
+          "questions_answers" : list,
+          "id" : quiz_id,
+          "created": (new Date().toLocaleString()),
+          "modified": (new Date().toLocaleString())
+        }))
+
+      }
+
 
     return (
 
@@ -111,7 +136,7 @@ const AddQuestions = () => {
 
         <div className="questionsWrapper">
         <div style={{width: '25%' , textAlign: 'center', margin: '20px auto'}} >
-            <span>Correct Answer Number </span>
+            <label>Correct Answer Number </label>
             <Select options={options} onChange={setSelected} value={selected}/>
         </div>
 
@@ -142,9 +167,12 @@ const AddQuestions = () => {
         </form>
         
         <div className="buttonWrapper">
-        <button onClick={changeState}>Add more answers</button>
-        <button onClick={Reset}>Next Question</button>
-        <button onClick={changeState}>Submit</button>
+        <button onClick={changeState} className='btn-2'  style={{backgroundColor: 'blue'}}>+ Add more answers</button>
+        <button onClick={Reset} className='btn-2'  style={{backgroundColor: 'blue'}}>+ Add Question</button>
+
+        <Link to = "/">
+        <button onClick={AddNew} className='btn-2' style={{backgroundColor : 'green'}}>Submit</button>
+        </Link>
         </div>
 
 

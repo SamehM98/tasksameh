@@ -8,10 +8,13 @@ const questionSlice = createSlice({
     reducers:{
         addQuiz: (state,action) => {
             state.value.push(action.payload)
-        }
+        },
+        updateQuiz:(state,action) => {
+            state.value = (action.payload)
+        }, 
     }
 })
 
-export const {addQuiz} = questionSlice.actions;
+export const {addQuiz , updateQuiz} = questionSlice.actions;
 
 export default questionSlice.reducer;

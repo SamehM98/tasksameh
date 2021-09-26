@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&family=Yaldevi:wght@400;700&display=swap');
+
 .wrapper{
     padding: 5%;
 }
@@ -13,7 +15,20 @@ input{
 .btn-1{
     margin: 60px auto;
     display: block;
-    padding: 8px;
+    padding: 12px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    color: white;
+    border-radius: 8%
+    
+}
+
+.btn-2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8%
 }
 
 .questionsWrapper{
@@ -25,4 +40,14 @@ input{
     justify-content: space-between;
     padding: 0 20%;
     margin-top: 5%;
+}
+
+label{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 }
