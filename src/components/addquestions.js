@@ -43,6 +43,7 @@ const AddQuestions = () => {
       
 
       //adding a new answer
+      //add new option to select box, and a new answer box
       const changeState =  () =>{
         setOptions((prev) => [...prev, { value: (options.length + 1).toString(),label:(options.length + 1).toString()}]);
         setAnswers((prev) => [...prev,  { id: id, text: ""}]);
@@ -51,6 +52,7 @@ const AddQuestions = () => {
       }
 
       //adding new question to the array and reseting inputs
+      //push to the list using rest operator
       const Reset = () =>{
 
         setList([...list, {
@@ -113,7 +115,7 @@ const AddQuestions = () => {
       }
 
       //Redux. Push to global state array
-
+      //Construct Object using the input and the props passed by location.state
       const AddNew = () =>{
         dispatch(addQuiz({
 
@@ -135,6 +137,7 @@ const AddQuestions = () => {
         
 
         <div className="questionsWrapper">
+
         <div style={{width: '25%' , textAlign: 'center', margin: '20px auto'}} >
             <label>Correct Answer Number </label>
             <Select options={options} onChange={setSelected} value={selected}/>
@@ -149,8 +152,8 @@ const AddQuestions = () => {
         onChange={onTermChange}
         value={query}/>
         <br/>
+
         <label>Answers</label>
-        
         <form>
                 <div>
                     
@@ -169,7 +172,6 @@ const AddQuestions = () => {
         <div className="buttonWrapper">
         <button onClick={changeState} className='btn-2'  style={{backgroundColor: 'blue'}}>+ Add more answers</button>
         <button onClick={Reset} className='btn-2'  style={{backgroundColor: 'blue'}}>+ Add Question</button>
-
         <Link to = "/">
         <button onClick={AddNew} className='btn-2' style={{backgroundColor : 'green'}}>Submit</button>
         </Link>
